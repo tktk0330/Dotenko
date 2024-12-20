@@ -32,6 +32,4 @@ playground.xcworkspace
 
 ## Personal setting
 .DS_Store
-*.swp
-UserInterfaceState.xcuserstate 
-Dotenko/Dotenko.xcodeproj/project.xcworkspace/xcuserdata
+Dotenko/Dotenko.xcodeproj/project.xcworkspace/xcuserdata/*.xcuserdatad/UserInterfaceState.xcuserstate
