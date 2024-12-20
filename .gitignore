@@ -32,7 +32,7 @@ playground.xcworkspace
 
 ## Personal setting
 .DS_Store
-Config.swift
+Dotenko/Config.swift
 
 # Xcode
 *.xcuserdatad/
