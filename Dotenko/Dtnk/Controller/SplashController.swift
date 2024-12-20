@@ -1,4 +1,3 @@
-import Foundation
 import SwiftUI
 
 struct SplashController {
@@ -9,11 +8,8 @@ struct SplashController {
     }
     
     func onSplashAppear() {
-        Task {
-            print("ホーム画面へ進みます")
-            // ホームへ進む
-            await scaleUpSplashAsync()
-//            Router().setBasePages(stack: [.top], animated: false)
+        scaleUpSplash {
+            
         }
     }
     
@@ -34,12 +30,12 @@ struct SplashController {
         }
     }
     
-    // 拡大アニメーション の async ラップ
-    func scaleUpSplashAsync() async {
-        await withCheckedContinuation { continuation in
-            scaleUpSplash {
-                continuation.resume()
-            }
-        }
-    }
+//    // 拡大アニメーション の async ラップ
+//    func scaleUpSplashAsync() async {
+//        await withCheckedContinuation { continuation in
+//            scaleUpSplash {
+//                continuation.resume()
+//            }
+//        }
+//    }
 }

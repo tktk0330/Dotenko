@@ -1,15 +1,11 @@
 /**
- SplashView
- 会社のロゴ的な物に変更
- 
- 裏で認証
+初期画面
+ ・認証
  */
 import SwiftUI
 
 struct SplashView: View {
     
-    @State private var userName: String = ""
-    @State private var iconURL: String = ""
     @StateObject var splash: SplashState = appState.splash
     
     init() {
@@ -19,21 +15,25 @@ struct SplashView: View {
     var body: some View {
         GeometryReader { geo in
             ZStack {
-                // 広告用
-                Rectangle()
-                    .foregroundColor(Color.white.opacity(0.3))
-                    .shadow(color: .gray, radius: 10, x: 0, y: 5)
-                    .frame(maxWidth: .infinity, maxHeight: 50)
-                    .position(x: UIScreen.main.bounds.width / 2, y: geo.size.height * 0.025)
                 
-                Text("IWM")
-                    .font(.system(size: 100))
+                Text("Splash")
+                    .font(.system(size: 50))
                     .foregroundColor(Color.white)
-                    .fontWeight(.bold)
                     .bold()
-                    .padding()
                     .opacity(splash.alpha)
                     .position(x: UIScreen.main.bounds.width / 2, y: geo.size.height * 0.50)
+                
+                // TODO:
+                Button(action: {
+                    Router().pushBasePage(pageId: .top)
+                }) {
+                    Text("START")
+                        .font(.system(size: 45))
+                        .foregroundColor(Color.white)
+                        .fontWeight(.bold)
+                        .padding(5)
+                }
+                .position(x: UIScreen.main.bounds.width / 2, y:  geo.size.height * 0.80)
                 
             }
             .onAppear {

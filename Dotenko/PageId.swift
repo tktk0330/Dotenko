@@ -1,10 +1,9 @@
 import SwiftUI
-import Foundation
 
 enum PageId: Int, JSONSerializable {
     
     case splash
-//    case top
+    case top
 //    case home
 //    case rule
 //    case rule_select
@@ -24,8 +23,8 @@ struct PageContent: View {
             switch id {
             case .splash:
                 SplashView()
-//            case .top:
-//                TopView()
+            case .top:
+                TopView()
 //            case .home:
 //                HomeView()
 //            case .rule:

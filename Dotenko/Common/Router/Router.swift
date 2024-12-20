@@ -5,7 +5,6 @@ final class RoutingState: ObservableObject {
     
     init() {
         self.baseNaviState = NaviState(stack: [.splash])
-//        self.baseNaviState = NaviState(stack: [.home])
     }
 }
 
