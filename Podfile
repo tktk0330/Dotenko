@@ -8,6 +8,7 @@ target 'Dotenko' do
   # Pods for Dotenko
 
   # Admob
+  pod 'Google-Mobile-Ads-SDK'
 
   # Realm
 
