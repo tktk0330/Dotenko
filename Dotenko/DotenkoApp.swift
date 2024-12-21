@@ -12,6 +12,9 @@ struct DotenkoApp: App {
             ZStack {
                 NaviWindow(state: appState.routing.baseNaviState)
                 LoadingView(loading.loadingTasks)
+                
+                // admob
+                BunnerView()
             }
             .background(
                 //basebackgroundが設定される
